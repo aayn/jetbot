@@ -17,7 +17,7 @@ class Motor(object):
         self.alpha = alpha
         self.beta = beta
         self.value = 0
-        atexit.register(self._release)
+        atexit.register(self._release)  # Release at exit
 
     def update_value(self, value):
         """Sets motor value between [-1, 1]."""
