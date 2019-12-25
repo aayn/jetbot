@@ -16,10 +16,12 @@ class Motor(object):
         self._motor = self._driver.getMotor(channel)
         self.alpha = alpha
         self.beta = beta
+        self.value = 0
         atexit.register(self._release)
 
     def update_value(self, value):
         """Sets motor value between [-1, 1]."""
+        self.value = value
         mapped_value = int(255.0 * (self.alpha * value + self.beta))
         speed = min(max(abs(mapped_value), 0), 255)
         self._motor.setSpeed(speed)
