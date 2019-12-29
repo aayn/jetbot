@@ -9,15 +9,8 @@ class TestCamera:
         camera = Camera()
     
     
-    def test_start(self):
-        """Test camera's thread start method."""
-        camera = Camera()
-        camera.start()
-        time.sleep(1)
-        image = bgr8_to_jpeg(camera.value)
-
-    def test_stop(self):
-        """Test camera's thread stop method."""
+    def test_start_stop(self):
+        """Test camera's thread start/stop methods."""
         camera = Camera()
         camera.start()
         time.sleep(1)
