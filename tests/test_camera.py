@@ -4,13 +4,8 @@ import time
 
 
 class TestCamera:
-    def test_init(self):
-        """Test if camera instance is initialzed."""
-        camera = Camera()
-    
-    
-    def test_start_stop(self):
-        """Test camera's thread start/stop methods."""
+    def test_init_start_stop(self):
+        """Test camera's thread init/start/stop methods."""
         camera = Camera()
         camera.start()
         time.sleep(1)
