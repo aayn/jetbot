@@ -11,6 +11,7 @@ class TestCamera:
         time.sleep(1)
         image = bgr8_to_jpeg(camera.value)
         camera.stop()
+        # Check if image changed after stopping
         assert image == bgr8_to_jpeg(camera.value)
         
             
