@@ -4,6 +4,7 @@ from .motor import Motor
 
 
 class Robot(object):
+    """Class used to interface with the robot's motion."""
     def __init__(self,
                  i2c_bus=1,
                  left_motor_channel=1,
